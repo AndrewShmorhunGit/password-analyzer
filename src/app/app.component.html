@@ -1,0 +1,58 @@
+<div class="app">
+  <div class="app-container center">
+    <h1 class="main-header">password analyzer</h1>
+    <div class="detectors center">
+      <div class="circle circle-big {{ this.setFirstIndicator('big') }}">
+        <div
+          class="circle circle-middle {{ this.setFirstIndicator('middle') }}"
+        >
+          <div
+            class="circle circle-small {{ this.setFirstIndicator('small') }}"
+          ></div>
+        </div>
+        <!-- <p class="detector-title"></p> -->
+      </div>
+      <div class="circle circle-big {{ this.setSecondIndicator('big') }}">
+        <div
+          class="circle circle-middle {{ this.setSecondIndicator('middle') }}"
+        >
+          <div
+            class="circle circle-small {{ this.setSecondIndicator('small') }}"
+          ></div>
+        </div>
+      </div>
+      <div class="circle circle-big {{ this.setThirdIndicator('big') }}">
+        <div
+          class="circle circle-middle {{ this.setThirdIndicator('middle') }}"
+        >
+          <div
+            class="circle circle-small {{ this.setThirdIndicator('small') }}"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="analyzer center">
+      <p>
+        {{ messageAnalyzer() }}
+      </p>
+    </div>
+    <div class="password center">
+      <label for="#password">
+        Password
+        <input
+          type="password"
+          id="#password"
+          name="input"
+          [(ngModel)]="input"
+          (input)="this.setPasswordStatus(input)"
+        />
+      </label>
+    </div>
+    <footer>
+      <p class="footer center">
+        &copy; Developed and design with Angular by Andrew Shmorgun. All rights
+        reserved. Jun 2023.
+      </p>
+    </footer>
+  </div>
+</div>
